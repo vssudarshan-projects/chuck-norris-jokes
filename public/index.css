@@ -1,0 +1,39 @@
+body{
+  background-color: #d6d8db;
+}
+
+
+.btn-wrapper{
+  margin:0;
+  margin-top:1rem;
+}
+
+.btn-cat{
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: white;
+  border-color: white;
+  border-style: outset;
+  color: black;
+  border-radius: .8rem;
+}
+
+hr{
+width:8%;
+border-top: 3px solid rgba(0,0,0,.9)
+}
+
+.joke{
+ border-radius: .5rem;
+}
+
+h5.category{
+margin-top:2rem;
+}
+
+.new-joke{
+  margin:0;
+}

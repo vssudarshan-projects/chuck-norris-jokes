@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chuck Norris Says</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+  <%if(joke && cat){%>
+    <body class="h-100 text-center">
+    <div class="d-flex w-100 h-100 flex-column justify-content-center align-content-center">
+      <h5 class="category">Selected Category: <%=cat%></h5>
+      <p class="joke lead text-white bg-primary d-flex flex-column container w-50 h-100 justify-content-center align-content-center"><%=joke%></p>
+      <p class="lead new-joke">
+        <a href="/chuck?category=<%=cat%>" class="fw-bold">New Joke</a>
+      </p>
+      <hr>
+</div>
+</body>
+  <%}else{%>
+<body>
+
+<%}%>
+    <%if(!joke && cat){%>
+    <form class="btn-wrapper container-fluid" method="get" action="/chuck">
+    <h1>Chuck Norris</h1>
+    <%for(let i = 0; i < cat.length; i++ ){ %>
+    <%if(i%4===0){%>
+    <div class="row">
+      <button type="submit" class="btn-cat btn btn-outline-primary col" name="category" value="<%=cat[i]%>"><%= cat[i] %></button>
+      <% }else{%>
+      <button type="submit" class="btn-cat btn btn-outline-primary col" name="category" value="<%=cat[i]%>"><%= cat[i] %></button>
+      <%}%>
+<%if(i%4===3){%>
+    </div>
+    <%}}}%>
+
+  </form>
+  </body>
+
+</html>
